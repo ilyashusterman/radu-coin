@@ -10,6 +10,7 @@ import {
   addRouteHandlers,
   createApplicationInstance,
 } from "./infrastructure/extention";
+import { getCoinsPrices } from "./coins.api";
 
 export function activate(context: vscode.ExtensionContext) {
   const coinsApp: ExtensionRouteHandler = new ExtensionRouteHandler(
@@ -17,16 +18,21 @@ export function activate(context: vscode.ExtensionContext) {
     "PlovCoin.Main"
   );
   coinsApp.addRoute(
-    "getData",
-    (req: ExtensionRequest, res: ExtensionResponse) => {
-      const data = { close: [1, 2] };
-      console.log(req);
-      res.send(data);
+    "getCoinsPrices",
+    async (req: ExtensionRequest, res: ExtensionResponse) => {
+      const {...props} = req.payload;
+      
+      const coins = await getCoinsPrices(context);
+      // save in each coin image url in context of vscode 
+      // context.globalState.update('BINANCE_API_KEY', BINANCE_API_KEY);
+      res.send(coins);
     }
   );
   coinsApp.addRoute(
     "GET_DATA",
     (req: ExtensionRequest, res: ExtensionResponse) => {
+            // context.globalState.update('BINANCE_API_KEY', BINANCE_API_KEY);
+      // const key = context.globalState.get('BINANCE_API_KEY');
       res.send("Hello from the extension!");
     }
   );
@@ -55,6 +61,7 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposable);
+
 }
 
 // this method is called when your extension is deactivated
