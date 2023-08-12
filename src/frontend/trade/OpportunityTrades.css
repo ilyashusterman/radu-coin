@@ -1,0 +1,104 @@
+.opportunity-trades-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+  }
+  
+  .opportunity-trades-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .opportunity-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .opportunity-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.2s;
+  }
+  
+  .opportunity-item.active {
+    background-color: #272727;
+  }
+  
+  .coin-name {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  
+  .action {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  
+  .buy {
+    background-color: #00cc00;
+    color: #ffffff;
+  }
+  
+  .sell {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+  
+  .coin-price {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .clean-profit {
+    font-size: 12px;
+    color: #aaaaaa;
+    margin-top: 4px;
+  }
+  
+  .strategy {
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+  
+  .description {
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+  
+  .activate-button {
+    padding: 6px 12px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 8px;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .activate-button.active {
+    background-color: #00cc00;
+  }
+  
+  .activate-button:hover {
+    background-color: #cc0000;
+  }
+  
+  .activate-button:active {
+    transform: scale(0.95);
+  }
+  

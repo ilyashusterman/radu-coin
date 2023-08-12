@@ -20,10 +20,10 @@ export function activate(context: vscode.ExtensionContext) {
   coinsApp.addRoute(
     "getCoinsPrices",
     async (req: ExtensionRequest, res: ExtensionResponse) => {
-      const {...props} = req.payload;
-      
+      const { ...props } = req.payload;
+
       const coins = await getCoinsPrices(context);
-      // save in each coin image url in context of vscode 
+      // save in each coin image url in context of vscode
       // context.globalState.update('BINANCE_API_KEY', BINANCE_API_KEY);
       res.send(coins);
     }
@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
   coinsApp.addRoute(
     "GET_DATA",
     (req: ExtensionRequest, res: ExtensionResponse) => {
-            // context.globalState.update('BINANCE_API_KEY', BINANCE_API_KEY);
+      // context.globalState.update('BINANCE_API_KEY', BINANCE_API_KEY);
       // const key = context.globalState.get('BINANCE_API_KEY');
       res.send("Hello from the extension!");
     }
@@ -61,7 +61,6 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(disposable);
-
 }
 
 // this method is called when your extension is deactivated
@@ -71,7 +70,7 @@ const getWebviewContent = (context: ExtensionContext, webview: Webview) => {
   const jsFile = "webview.js";
   const localServerUrl = "http://localhost:9000";
 
-  let scriptUrl = null;
+  let scriptUrl: any = null;
   let cssUrl = null;
 
   const isProduction = context.extensionMode === ExtensionMode.Production;

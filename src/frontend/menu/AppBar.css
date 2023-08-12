@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+h1 {
+  font-weight: 900;
+  color: #ff0000;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.moeda-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #ffffff;
+}
+
+.moeda-search {
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.moeda-text {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.moeda-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #ffffff;
+}
+
+.moeda-app-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  background-color: #1a1a1a;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.moeda-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Global styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* CoinStats component styles */
+.moeda-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 64px;
+  color: #ffffff;
+}
+
+.moeda-app-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px;
+  background-color: #1a1a1a;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.moeda-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.moeda-input {
+  padding: 8px 16px;
+  width: 300px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.preferred-coins {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 16px;
+  background-color: #1a1a1a;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.preferred-coin-box {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background-color: #272727;
+  border-radius: 8px;
+  margin-right: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.preferred-coin-box:last-child {
+  margin-right: 0;
+}
+
+.coin-image {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.coin-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-symbol {
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.coin-price {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.coin-price-change {
+  font-size: 12px;
+}
+
+.positive {
+  color: #00ff00;
+}
+
+.negative {
+  color: #ff0000;
+}
+
+.settings-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #145b84;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.settings-button:hover {
+  background-color: #76bbc5;
+}
+
+.settings-button:active {
+  transform: scale(0.95);
+}
