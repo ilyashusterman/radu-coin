@@ -26,7 +26,7 @@ Here's a high-level schema of the extension's architecture:
 1. Install [Visual Studio Code](https://code.visualstudio.com/).
 2. Open VS Code.
 3. Go to Extensions (Ctrl+Shift+X).
-4. Search for "CryptoCurrency Dashboard" and install the extension.
+4. Search for "PlovCoin: Dashboard" and install the extension.
 5. Open the extension's settings to set your Binance API key.
 
 ## Usage
