@@ -3,7 +3,7 @@
   "displayName": "PlovCoin",
   "publisher": "ilyashusterman",
   "description": "",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "icon": "images/shibaPlov128.png",
   "repository": {
     "url": "https://github.com/ilyashusterman/radu-coin",
@@ -23,7 +23,7 @@
     "commands": [
       {
         "command": "PlovCoin.Main.openWebView",
-        "title": "PlovCoin: Dashboard"
+        "title": "PlovCoin"
       }
     ]
   },
@@ -46,6 +46,7 @@
   "devDependencies": {
     "@estruyf/vscode": "^1.1.0",
     "@types/glob": "^7.2.0",
+    "@types/jest": "^29.5.3",
     "@types/jsonfile": "^6.1.1",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
@@ -68,14 +69,24 @@
     "react-dom": "^18.2.0",
     "rimraf": "^3.0.2",
     "style-loader": "^3.3.1",
+    "ts-jest": "^29.1.1",
     "ts-loader": "^9.4.1",
-    "typescript": "^4.7.4",
+    "typescript": "^5.1.6",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1"
   },
+  "jest": {
+    "preset": "ts-jest"
+  },
   "dependencies": {
+    "@types/got": "^9.6.12",
     "axios": "^1.4.0",
-    "jsonfile": "^6.1.0"
+    "bufferutil": "^4.0.7",
+    "ccxt": "^4.0.67",
+    "got": "^11.8.2",
+    "jsonfile": "^6.1.0",
+    "socks-proxy-agent": "^8.0.1",
+    "utf-8-validate": "^5.0.10"
   }
 }

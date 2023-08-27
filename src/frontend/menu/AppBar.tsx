@@ -7,7 +7,6 @@ import Settings from "./Settings";
 
 const AppBar: React.FC = () => {
   const [moedas, setMoedas] = useState([]);
-  const [displayMoedas, setDisplayMoedas] = useState([]);
   const [search, setSearch] = useState("");
   const [preferredCoins, setPreferredCoins] = useState([]); // Array to store preferred coins
   const [showSettings, setShowSettings] = useState(false); // State to control showing settings
@@ -58,10 +57,16 @@ const AppBar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const displayMoedas = moedas.filter((moeda: any) =>
-      moeda.name.toLowerCase().includes(search.toLowerCase())
-    );
-    setDisplayMoedas(displayMoedas);
+    const displayMoedas = moedas.filter((moeda: any) => {
+      if (search == "") {
+        return true;
+      }
+      const name = moeda.name.toLowerCase();
+      if (name.includes(search.toLowerCase())) {
+        return true;
+      }
+      return false;
+    });
     setPreferredCoins(displayMoedas.slice(0, MAX_PREFERRED_COINS));
   }, [search, moedas]);
 
@@ -78,14 +83,12 @@ const AppBar: React.FC = () => {
           >
             Settings
           </button>
-          <form>
-            <input
-              className="moeda-input"
-              type="text"
-              onChange={handleChange}
-              placeholder="Search for a coin"
-            />
-          </form>
+          <input
+            className="moeda-input"
+            type="text"
+            onChange={handleChange}
+            placeholder="Search for a coin"
+          />
         </div>
         {preferredCoins.map((moeda: any) => (
           <div className="preferred-coin-box" key={moeda.id}>
@@ -107,7 +110,6 @@ const AppBar: React.FC = () => {
         ))}
       </div>
       {showSettings && <Settings />}{" "}
-      {/* Display Settings component when showSettings is true */}
     </div>
   );
 };

@@ -14,7 +14,7 @@ import { getCoinsPrices } from "./coins.api";
 
 export function activate(context: vscode.ExtensionContext) {
   const coinsApp: ExtensionRouteHandler = new ExtensionRouteHandler(
-    "PlovCoin Main",
+    "PlovCoin",
     "PlovCoin.Main"
   );
   coinsApp.addRoute(
